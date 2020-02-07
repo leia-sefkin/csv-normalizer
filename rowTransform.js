@@ -1,5 +1,9 @@
 const moment = require('moment-timezone');
 
+//TimeZone definitions for converting timestamps
+const inputTimeZone = 'America/Los_Angeles';
+const outputTimeZone = 'America/New_York';
+
 /*
   Check and attempt to sanitize/normalize Unicode according to XML 1.0 standards
   Regex borrowed from here: 
@@ -9,10 +13,6 @@ function normalizeUnicode(input) {
   const regex = /([^\x09\x0A\x0D\x20-\uD7FF\uE000-\uFFFC\u{10000}-\u{10FFFF}])/ug;
   return input.replace(regex, '\uFFFD');
 }
-
-//TimeZone definitions for converting timestamps
-const inputTimeZone = 'America/Los_Angeles';
-const outputTimeZone = 'America/New_York';
 
 /*
   Normalize the data for each row, all params listed are required

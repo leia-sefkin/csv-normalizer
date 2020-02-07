@@ -9,7 +9,7 @@ Built and tested with:
 
 ## Running the script 
 
-This script takes in an input CSV file as the first argument and will output a normalized version to the file specified in the second argument. If no file exists it will create one. 
+This script leverages the [fast-csv](https://github.com/C2FO/fast-csv) library to extract transform and load data from one CSV into another. To run the script list the input CSV file as the first argument and a name the output CSV to load data into. If no output file exists it will create one. 
 
 For example: 
 
@@ -39,5 +39,7 @@ Notes
 * FullName will be translated to uppercase ALLCAPS
 
 * FooDuration and BarDuraition will be translated into seconds. All formats accepted are following the [moment.duration docs](https://momentjs.com/docs/#/durations/)
+
+* TotalDuration will be translated into the sum of Foo and BarDuration
 
 * Notes and Address will be left as is, aside from sanitizing input against UTF-8 standards

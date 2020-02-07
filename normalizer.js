@@ -1,7 +1,7 @@
 const fs = require('fs');
 const csv = require('fast-csv');
 
-
+//Methods to normalize the data
 const rowTransform = require('./rowTransform');
 
 //Input and output CSV files to write to 
@@ -34,6 +34,7 @@ readStream
   .transform(function(row, next) {
     rowTransform(row, function(err, outputRow) {
     
+      //If there's an error normalizing the row, skip it and move on
       if(err) {
         console.error(`Error while normalizing row: ${err.message}`);
         return next(null);
