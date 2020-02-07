@@ -1,0 +1,14 @@
+{
+  "name": "csv-normalizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "normalizer.js",
+  "keywords": [],
+  "author": "Leia Sefkin",
+  "license": "MIT",
+  "dependencies": {
+    "fast-csv": "^4.0.2",
+    "moment-timezone": "^0.5.27"
+  },
+  "devDependencies": {}
+}
